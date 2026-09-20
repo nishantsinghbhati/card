@@ -1,0 +1,252 @@
+.scratchSection {
+  background-color: #fcfbf9;
+  background-image: radial-gradient(circle at 10% 10%, #fff8e7 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(4rem, 10vw, 8rem) 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  z-index: 10;
+  margin-bottom: 3.5rem;
+}
+
+.headingSmall {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #c9a24a;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.headingSub {
+  font-family: var(--font-heading);
+  color: #6e2c2c;
+  letter-spacing: 0.05em;
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.container {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+}
+
+.card {
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  animation: floatingHeart 4s ease-in-out infinite;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card:hover .heartBorder {
+  filter: drop-shadow(0 0 15px rgba(201, 162, 39, 0.6));
+}
+
+@keyframes floatingHeart {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.heartBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.08));
+}
+
+.heartSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.revealedContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.revealItem {
+  opacity: 0;
+  will-change: transform, opacity;
+  margin: 0.5rem 0;
+  transform: scale(0.95);
+}
+
+.dateText {
+  font-family: var(--font-heading);
+  color: #b38728;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8), -1px -1px 2px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.canvasWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  clip-path: url(#heartClip);
+}
+
+.shimmerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+  mix-blend-mode: overlay;
+  background: linear-gradient(110deg, transparent 0% 40%, rgba(255, 255, 255, 0.7) 50%, transparent 60% 100%) 0 0 / 200% 100%;
+  animation: shimmerSweep 1.5s ease-in-out forwards;
+}
+
+@keyframes shimmerSweep {
+  0% { opacity: 0; background-position: 200% 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; background-position: -200% 0; }
+}
+
+.scratchCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+}
+
+.heartBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  filter: drop-shadow(0 0 8px rgba(201, 162, 39, 0.3));
+  transition: filter 0.5s;
+  animation: breathing 4s ease-in-out infinite;
+}
+
+@keyframes breathing {
+  0%, 100% { filter: drop-shadow(0 0 8px rgba(201, 162, 39, 0.3)); }
+  50% { filter: drop-shadow(0 0 12px rgba(201, 162, 39, 0.5)); }
+}
+
+.particleCanvas {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.ambientDecor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ambientParticle {
+  position: absolute;
+  border-radius: 50%;
+  animation: ambientFloat linear infinite;
+}
+
+@keyframes ambientFloat {
+  0% { opacity: 0; transform: translateY(100vh) rotate(0); }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-20vh) rotate(360deg); }
+}
+
+.instructionWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5rem;
+  z-index: 10;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.instructionText {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.handIcon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-accent);
+  opacity: 0.85;
+  animation: swipe 2s ease-in-out infinite;
+}
+
+@keyframes swipe {
+  0%, 100% { transform: translateX(15px) rotate(10deg); }
+  50% { transform: translateX(-15px) rotate(-10deg); }
+}
+
+@media (max-width: 480px) {
+  .scratchSection { padding: 40px 10px; }
+  .headingSub { font-size: 1.5rem; }
+  .dateText { font-size: 1.6rem; }
+  .card { max-width: 310px; }
+  .instructionText { font-size: 0.95rem; }
+}

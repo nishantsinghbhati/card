@@ -1,0 +1,135 @@
+.coupleSection {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(4rem, 10vw, 8rem) 2rem;
+}
+
+.container {
+  text-align: center;
+  border: var(--border-gold);
+  width: 100%;
+  max-width: 800px;
+  box-shadow: var(--shadow-elegant);
+  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  pointer-events: none;
+  border: 1px solid rgba(201, 162, 39, 0.25);
+  border-radius: 8px;
+  position: absolute;
+  inset: 10px;
+}
+
+.animateBlock {
+  will-change: transform, opacity, filter;
+  width: 100%;
+}
+
+.ekOnkar {
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+  font-family: serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.shabad {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  opacity: 0.75;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+.heading {
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-display);
+  font-size: 38px;
+  font-weight: 400;
+}
+
+.paragraph {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  max-width: 600px;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.name {
+  font-family: var(--font-names);
+  color: var(--color-primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5em;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.relationLabel {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.parentsName {
+  font-family: var(--font-body);
+  color: var(--color-accent);
+  letter-spacing: 0.05em;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.withText {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  font-style: italic;
+  letter-spacing: 0.2em;
+  opacity: 0.6;
+  margin: 0.8rem 0;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 3rem 1.2rem;
+  }
+  .heading {
+    font-size: 1.8rem;
+  }
+  .paragraph {
+    margin-bottom: 1.8rem;
+    font-size: 1rem;
+  }
+  .name {
+    font-size: 2rem;
+  }
+  .parentsName {
+    font-size: 1.05rem;
+  }
+  .withText {
+    margin: 0.6rem 0;
+  }
+}

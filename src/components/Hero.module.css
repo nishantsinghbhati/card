@@ -1,0 +1,215 @@
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ivory;
+  overflow: hidden;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.posterImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.posterHidden {
+  opacity: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tapButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  transform-origin: 50%;
+}
+
+@keyframes breathingText {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+
+@keyframes breathingLogo {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+.tapText {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+  animation: breathingText 2.8s ease-in-out infinite;
+}
+
+.tapIcon {
+  width: 85px;
+  height: 85px;
+  color: var(--color-accent);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.45));
+  animation: breathingLogo 2.8s ease-in-out infinite;
+}
+
+.namesWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  overflow: visible;
+}
+
+.namesPositioner {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15vh;
+}
+
+.namesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: visible;
+}
+
+.namesContainer > * {
+  opacity: 0;
+  will-change: transform, opacity, filter, clip-path;
+}
+
+.name {
+  font-family: var(--font-names);
+  color: var(--color-secondary);
+  -webkit-text-stroke: 0.9px rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.05em;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 0, 0, 0.7), 0 0 50px rgba(0, 0, 0, 0.5), 0 0 70px rgba(0, 0, 0, 0.3);
+  padding: 0.15em 0.5em;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.45;
+  overflow: visible;
+}
+
+.weds {
+  font-family: var(--font-heading);
+  color: var(--color-secondary);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.9), 0 4px 12px rgba(0, 0, 0, 0.8), 0 12px 32px rgba(0, 0, 0, 0.7);
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 5.5rem;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+.scrollIndicatorContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  animation: hapticBounce 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform, filter, opacity;
+}
+
+@keyframes hapticBounce {
+  0%, 100% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 5px rgba(201, 162, 39, 0.4));
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 20px #c9a227) drop-shadow(0 0 30px rgba(201, 162, 39, 0.6));
+    transform: translateY(10px);
+  }
+}
+
+.scrollText {
+  font-family: var(--font-heading);
+  color: gold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.8), 0 0 10px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+.scrollArrow {
+  color: #fff;
+  font-size: 3.8rem;
+  line-height: 1;
+  font-family: var(--font-heading);
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.9)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.7));
+}
+
+@media (max-width: 768px) {
+  .tapIcon {
+    width: 110px;
+    height: 110px;
+  }
+  .name {
+    font-size: 3rem;
+  }
+  .weds {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    -webkit-text-stroke: 0.9px rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.05em;
+    font-size: 2.3rem;
+  }
+}

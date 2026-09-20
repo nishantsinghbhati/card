@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Mussica Swash";
+  src: url("/assets/mussica-swash-CG7saVDq.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-primary: #6e1f2f;
+  --color-secondary: #faf5eb;
+  --color-accent: #c9a227;
+  --color-accent-light: #e8c978;
+  --color-text: #2f2f2f;
+  --color-bg-gradient: linear-gradient(135deg, #faf5eb 0%, #f5efe0 100%);
+  
+  --font-heading: "Cinzel", serif;
+  --font-names: "Mussica Swash", cursive;
+  --font-body: "Cormorant Garamond", serif;
+  --font-script: "Parisienne", cursive;
+  --font-display: "Great Vibes", cursive;
+  
+  --border-gold: 1px solid #c9a2274d;
+  --border-gold-subtle: 1px solid rgba(201, 162, 39, 0.25);
+  --shadow-elegant: 0 10px 30px rgba(0, 0, 0, 0.05);
+  --shadow-gold: 0 8px 24px rgba(201, 162, 39, 0.15);
+  --color-white: var(--color-secondary);
+  --color-dark-gold: var(--color-accent);
+  --color-light-text: var(--color-text);
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --shadow-soft: var(--shadow-elegant);
+  --transition: all 0.3s ease;
+
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-secondary);
+  background-image: var(--color-bg-gradient);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-attachment: fixed;
+}
+
+*, *::before, *::after, html, body {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Subtle Punjabi decorative border accent utility */
+.punjabi-border-pattern {
+  position: relative;
+}
+
+.punjabi-border-pattern::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 16px;
+  margin: 1rem auto;
+  background: radial-gradient(circle at center, #c9a227 2px, transparent 2px);
+  background-size: 12px 12px;
+  opacity: 0.6;
+}

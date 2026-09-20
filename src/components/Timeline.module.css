@@ -1,0 +1,263 @@
+.timelineSection {
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: clamp(4rem, 10vw, 8rem) 2rem;
+}
+
+.title {
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 5rem;
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.timelineContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  max-width: 650px;
+}
+
+.cardWrapper {
+  width: 100%;
+}
+
+.card {
+  text-align: center;
+  background: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  position: relative;
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(201, 162, 39, 0.15);
+  border-radius: 14px;
+  pointer-events: none;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.eventTitle {
+  color: var(--color-accent);
+  margin-bottom: 0.8rem;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  line-height: 1.2;
+}
+
+.date {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.75;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.time {
+  font-family: var(--font-heading);
+  color: var(--color-accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.imageWrapper {
+  border-radius: 16px;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.eventImage {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .eventImage {
+  transform: scale(1.02);
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.venueSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.venueNameWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.venueLabel {
+  color: #2f2e2d;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.venueName {
+  background: linear-gradient(90deg, #c9a24a, #e8c978);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.venueStreet {
+  color: #555555;
+  text-align: center;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+.venueCountry {
+  font-family: var(--font-heading);
+  color: #6e2c2c;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.mapWrap {
+  margin-top: 0.8rem;
+}
+
+.button {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-dark-gold);
+  background: var(--color-white);
+  border: 1px solid rgba(201, 161, 74, 0.4);
+  border-radius: 100px;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 26px;
+  font-family: var(--font-heading);
+  font-size: 11px;
+  display: inline-flex;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.button:hover {
+  background: #fffdf9;
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(201, 161, 74, 0.2);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.eventDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin: -1rem 0;
+  opacity: 0.6;
+}
+
+.dividerLine {
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(90deg, transparent, #c9a227);
+}
+
+.dividerLineRight {
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(90deg, #c9a227, transparent);
+}
+
+.dividerKhanda {
+  color: var(--color-accent);
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .timelineSection {
+    padding: 4rem 1rem;
+  }
+  .title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  .eventTitle {
+    font-size: 2.6rem;
+  }
+  .card {
+    padding: 1.6rem 1.2rem;
+  }
+  .venueName {
+    font-size: 1.5rem;
+  }
+  .venueStreet {
+    font-size: 1.05rem;
+  }
+}
