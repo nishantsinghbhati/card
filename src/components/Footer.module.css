@@ -53,10 +53,10 @@
 }
 
 .hashtag {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   color: var(--color-accent);
-  letter-spacing: 0.18em;
-  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  font-size: 2rem;
   font-weight: 600;
   margin-top: 1.8rem;
   text-shadow: 0 0 12px rgba(201, 162, 39, 0.35);
