@@ -49,7 +49,6 @@ export default function Preloader({ onComplete, videoReady }) {
           alt="Ashpreet & Simrat Emblem"
           className={styles.logo}
         />
-        <h1 className={styles.loadingText}>✨ A Beautiful Love Story Awaits... ✨</h1>
         <div className={styles.loaderLine} />
       </div>
     </div>
