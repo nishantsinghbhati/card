@@ -4,7 +4,7 @@ export const weddingData = {
     bride: "Simrat Kaur",
     groomFirst: true,
     displayOrder: "Ashpreet Singh & Simrat Kaur",
-    hashtag: "#AshpreetWedsSimrat",
+    hashtag: "#SimAsh",
     invitationDate: "1 & 2 November 2026",
     weddingDateISO: "2026-11-01T20:00:00"
   },

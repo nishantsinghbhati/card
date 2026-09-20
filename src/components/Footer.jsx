@@ -22,6 +22,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.divider} />
+      <div className={styles.hashtag}>#SimAsh</div>
     </footer>
   );
 }
