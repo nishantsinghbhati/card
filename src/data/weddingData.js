@@ -44,8 +44,7 @@ export const weddingData = {
       location: "Ashok Vihar, Delhi",
       city: "DELHI, INDIA",
       address: "A 7, opp. Gujranwala Town, near SAYA AUTO MARUTI SHOWROOM, GT Karnal Road Industrial Area, Ashok Vihar, Delhi, 110033",
-      query: "Grand Imperia North Banquet, A 7, opp. Gujranwala Town, Ashok Vihar, Delhi",
-      image: "/assets/event1.webp"
+      query: "Grand Imperia North Banquet, A 7, opp. Gujranwala Town, Ashok Vihar, Delhi"
     },
     {
       id: "mehendi",
@@ -58,8 +57,7 @@ export const weddingData = {
       location: "Moti Nagar, New Delhi",
       city: "NEW DELHI, INDIA",
       address: "I-5&6, Najafgarh Rd, opp. Metro Pillar no.332, Moti Nagar, Kailash Park, Basai Dara pur, Bali Nagar, New Delhi, Delhi, 110015",
-      query: "Clay 1 Glorious, Najafgarh Rd, Moti Nagar, New Delhi",
-      image: "/assets/event2.webp"
+      query: "Clay 1 Glorious, Najafgarh Rd, Moti Nagar, New Delhi"
     },
     {
       id: "wedding",
@@ -72,8 +70,7 @@ export const weddingData = {
       location: "GT Karnal Road, Delhi",
       city: "DELHI, INDIA",
       address: "Industrial Area, GT Karnal Road Industrial Area, Ashok Vihar, Delhi, 110033",
-      query: "The Grace by Symphony, GT Karnal Road Industrial Area, Ashok Vihar, Delhi",
-      image: "/assets/event4.webp"
+      query: "The Grace by Symphony, GT Karnal Road Industrial Area, Ashok Vihar, Delhi"
     },
     {
       id: "anandKaraj",

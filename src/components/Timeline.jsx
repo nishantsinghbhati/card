@@ -41,17 +41,19 @@ const EventCard = memo(({ event, isFirst }) => {
           <p className={styles.time}>{event.time}</p>
         </div>
 
-        <div className={styles.imageWrapper}>
-          <img
-            src={event.image}
-            alt={event.title}
-            className={styles.eventImage}
-            loading={isFirst ? 'eager' : 'lazy'}
-            decoding="async"
-            width="600"
-            height="400"
-          />
-        </div>
+        {event.image && (
+          <div className={styles.imageWrapper}>
+            <img
+              src={event.image}
+              alt={event.title}
+              className={styles.eventImage}
+              loading={isFirst ? 'eager' : 'lazy'}
+              decoding="async"
+              width="600"
+              height="400"
+            />
+          </div>
+        )}
 
         <div className={styles.cardFooter}>
           <div className={styles.venueSection}>
